@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon"
+    href="https://lh3.googleusercontent.com/WtR1ew3mCxI1gFCnzX69Mpa11WnWbSZJ-XwpvvbNYWX6ihnFsaKPFYPC5LV6187NVm9y_zPTeZODeKiFokKd3ZkeeMzYUJhbPKQtIafRsLqiq0c1H3_lnTmnda_P51E1eKGvBveuQZgpiNEj60lilBlboClpbVYk7NlFwxkhSvnnsMSRfg5A2Hp1_4bZ9hqqPRBbY95LbMuW95Y2Cj7hrUEnjg6l0vYMda3h56GTg23H_tRKbM-x9sAYroh0jr-TjK5MGR-dao12sFtSO5yrydYKHDfy6rE1oPWreAZXO8y2Lk00DamLg1JYIzyo_raPgBrIuzALvAXqCwwVJzHM7fQU_J7FjUGFjifL__sZFlBoW6yw0uhgOulhf6PQzAEYaFloaTExX9jBJO0TctHeMvw1dVBeSUf67Czc1oXlyMJJS82t3QIq0w-MQEbmsn8ce0x3cwxF_l4bV9-bGt45zS9ELVmjAyZCxYZWXt1VP-skHu0BO7YbNVqjDzHkX09nWp5Wq-NfazD7eNcZj1satxyojZSDuDmXT0rgwsUR20mOWXZ--Y4Uj3OF2Qq1tziAJsZw9dxFbX3Kq3-jYiDLeveaYjC_LyFDLZIy4cd8FQy8wPHzO36MJAgYN2C8KRj49LVh8QJomIoXQedO10fKfNvUbuDYFF4GDd3qDVAA-n_NnvB0_aQrpAVkHVaaiifU0E0QILxAaBsvueTzD5XS6r-5tTEENOV5Q6XCjnWSY38ac5TGV0fujpjgV9yszejKkemIe_7NwS2ssQaEg4Jby1elvX-6JCmUuh37DWnzIjLmK0EM=w242-h234-no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Eater' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
+
+
+  <!-- google font >> Cinzel Decorative for logo name -->
+  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css"
+    integrity="sha256-39jKbsb/ty7s7+4WzbtELS4vq9udJ+MDjGTD5mtxHZ0=" crossorigin="anonymous" />
+
+
+  <title>Martina Magdi Portfolio</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+  <script>
+    // Call & init
+    $(document).ready(function () {
+      $('.ba-slider').each(function () {
+        var cur = $(this);
+        // Adjust the slider
+        var width = cur.width() + 'px';
+        cur.find('.resize img').css('width', width);
+        // Bind dragging events
+        drags(cur.find('.handle'), cur.find('.resize'), cur);
+      });
+    });
+
+    // Update sliders on resize. 
+    // Because we all do this: i.imgur.com/YkbaV.gif
+    $(window).resize(function () {
+      $('.ba-slider').each(function () {
+        var cur = $(this);
+        var width = cur.width() + 'px';
+        cur.find('.resize img').css('width', width);
+      });
+    });
+
+    function drags(dragElement, resizeElement, container) {
+
+      // Initialize the dragging event on mousedown.
+      dragElement.on('mousedown touchstart', function (e) {
+
+        dragElement.addClass('draggable');
+        resizeElement.addClass('resizable');
+
+        // Check if it's a mouse or touch event and pass along the correct value
+        var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+        // Get the initial position
+        var dragWidth = dragElement.outerWidth(),
+          posX = dragElement.offset().left + dragWidth - startX,
+          containerOffset = container.offset().left,
+          containerWidth = container.outerWidth();
+
+        // Set limits
+        minLeft = containerOffset + 10;
+        maxLeft = containerOffset + containerWidth - dragWidth - 10;
+
+        // Calculate the dragging distance on mousemove.
+        dragElement.parents().on("mousemove touchmove", function (e) {
+
+          // Check if it's a mouse or touch event and pass along the correct value
+          var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+          leftValue = moveX + posX - dragWidth;
+
+          // Prevent going off limits
+          if (leftValue < minLeft) {
+            leftValue = minLeft;
+          } else if (leftValue > maxLeft) {
+            leftValue = maxLeft;
+          }
+
+          // Translate the handle's left value to masked divs width.
+          widthValue = (leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth + '%';
+
+          // Set the new values for the slider and the handle. 
+          // Bind mouseup events to stop dragging.
+          $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+            $(this).removeClass('draggable');
+            resizeElement.removeClass('resizable');
+          });
+          $('.resizable').css('width', widthValue);
+        }).on('mouseup touchend touchcancel', function () {
+          dragElement.removeClass('draggable');
+          resizeElement.removeClass('resizable');
+        });
+        e.preventDefault();
+      }).on('mouseup touchend touchcancel', function (e) {
+        dragElement.removeClass('draggable');
+        resizeElement.removeClass('resizable');
+      });
+    }
+  </script>
+</body>
+
+</html>

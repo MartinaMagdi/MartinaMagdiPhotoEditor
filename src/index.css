@@ -1,0 +1,144 @@
+html{
+	height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Allerta", "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	color: #6a4757;
+	/* background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%; */
+	/* -webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite; */
+	font-size: 20px;
+	height: 100%;
+	background: #fafafa;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+::-moz-selection { background: #6a4757; color: white }
+::selection { background: #6a4757; color: white }
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+form{
+  padding: 20px;
+  margin-top: 60px;
+}
+
+form button, form h5{
+  margin: 20px 0;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]){
+  border-color: #6a4757;
+  box-shadow: none;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label{
+  color: #6a4757 !important;
+}
+
+.brand-logo{
+	/* font-family: 'Eater'; */
+	font-family: 'Cinzel Decorative';
+}
+
+.about,
+.work-experience{
+	margin: 4rem auto
+}
+
+.about h2,
+.about h4{
+	text-align: center;
+	text-transform: uppercase
+}
+
+.about h4{
+	color: #6a4757b0
+}
+
+.about p{
+	line-height: 3rem;
+	margin: 3rem 0;
+}
+
+.about .links{
+	text-align: right;
+}
+
+.about .fab,
+.about .fas{
+	color: #838080;
+	font-size: 2.25rem;
+	margin: 0 1rem 0 0;
+	background: #00000014;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.about .fab:hover,
+.about .fas:hover{
+	color: #6a4757
+}
+
+
+@media screen and (max-width: 767px){
+    .hello-txt{
+		font-size: 2rem !important;
+	}
+
+	.title-txt{
+		font-size: 1.5rem !important;
+	}
+}

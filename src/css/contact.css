@@ -1,0 +1,26 @@
+.contact{
+    margin: 3rem auto;
+}
+
+.text-field{
+    width: 100%;
+}
+
+.contact form{
+    margin: 0;
+}
+
+.MuiCard-root{
+    overflow: unset !important;
+}
+
+.error-msg{
+    color: red;
+    font-size: 12px;
+}
+
+.send-btn{
+    border-radius: 0 !important;
+    margin: 1.5rem auto 0 auto !important;
+    display: block !important;
+}

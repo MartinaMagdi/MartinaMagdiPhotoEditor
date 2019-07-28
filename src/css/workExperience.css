@@ -1,0 +1,31 @@
+.work-experience .duration{
+    margin: 0 3rem;
+}
+
+.work-experience .from,
+.work-experience .to{
+    margin: 0 1rem;
+    word-spacing: 5px;
+    font-weight: bold
+}
+
+.responsibilities,
+.projects{
+    font-weight: bold;
+    font-size: 1.25rem
+}
+
+.responsibilities-list,
+.projects-list{
+    margin: 1rem 3rem
+}
+
+.company-row{
+    margin: 2rem auto;
+}
+
+@media screen and (max-width: 767px){
+    .duration{
+        display: table-cell
+    }
+}
