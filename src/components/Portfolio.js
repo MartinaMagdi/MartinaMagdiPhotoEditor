@@ -24,6 +24,18 @@ export default class Portfolio extends Component {
             { id: 5, name: 'Posts App', description: 'Creating, updating and deleting posts using axios.', before: '5.jpg', after: '5-1.jpg' },
 
             { id: 6, name: 'Posts App', description: 'Creating, updating and deleting posts using axios.', before: '6.jpg', after: '6-1.jpg' },
+
+            { id: 7, name: 'Posts App', description: 'Creating, updating and deleting posts using axios.', before: '7.jpg', after: '7-1.jpg' },
+
+            { id: 8, name: 'Posts App', description: 'Creating, updating and deleting posts using axios.', before: '8.jpg', after: '8-1.jpg' },
+
+            { id: 9, name: 'Posts App', description: 'Creating, updating and deleting posts using axios.', before: '9.jpg', after: '9-1.jpg' },
+
+            { id: 10, name: 'Posts App', description: 'Creating, updating and deleting posts using axios.', before: '10.jpg', after: '10-1.jpg' },
+
+            { id: 11, name: 'Posts App', description: 'Creating, updating and deleting posts using axios.', before: '11.jpg', after: '11-1.jpg' },
+
+            { id: 12, name: 'Posts App', description: 'Creating, updating and deleting posts using axios.', before: '12.jpg', after: '12-1.jpg' },
         ]
 
         const projectsList = projects.map(project => {
