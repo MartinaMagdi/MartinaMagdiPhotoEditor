@@ -24,10 +24,10 @@ const Navbar = () => {
             onKeyDown={toggleDrawer(side, false)}
         >
             <ul className="sm-menu-content">
-                <li><Link to="/">About</Link></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
                 {/* <li><Link to="/work-experience">Work Experience</Link></li> */}
                 {/* <li><Link to="/skills">Skills</Link></li> */}
-                <li><Link to="/portfolio">Portfolio</Link></li>
                 <li><Link to="/contact">Contact Me</Link></li>
             </ul>
         </div>
@@ -37,10 +37,10 @@ const Navbar = () => {
             <Link to="/" className="brand-logo">Martina Magdi</Link>
             <div className="container lg-menu-content">
                 <ul className="right">
-                    <li><Link to="/" className="right">About</Link></li>
+                    <li><Link to="/" className="right">Home</Link></li>
+                    <li><Link to="/about" className="right">About</Link></li>
                     {/* <li><Link to="/work-experience" className="right">Work Experience</Link></li> */}
                     {/* <li><Link to="/skills" className="right">Skills</Link></li> */}
-                    <li><Link to="/portfolio" className="right">Portfolio</Link></li>
                     <li><Link to="/contact" className="right">Contact Me</Link></li>
                 </ul>
             </div>
