@@ -37,7 +37,7 @@ export default class Portfolio extends Component {
 
             { id: 12, name: 'Posts App', description: 'Creating, updating and deleting posts using axios.', before: '12.jpg', after: '12-1.jpg' },
 
-            { id: 13, name: 'Posts App', description: 'Creating, updating and deleting posts using axios.', before: '13.jpg', after: '13-1.jpg' },
+            { id: 13, name: 'Posts App', description: 'Creating, updating and deleting posts using axios.', before: '1297847.jpg', after: '13-1.jpg' },
 
             { id: 14, name: 'Posts App', description: 'Creating, updating and deleting posts using axios.', before: '14.jpg', after: '14-1.jpg' },
 
